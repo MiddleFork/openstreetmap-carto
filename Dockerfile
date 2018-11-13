@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM middlefork/basegis
 
 # Style dependencies
 RUN apt-get update && apt-get install --no-install-recommends -y \
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 # Kosmtik with plugins, forcing prefix to /usr because bionic sets
 # npm prefix to /usr/local, which breaks the install
-RUN npm set prefix /usr && npm install -g kosmtik
+RUN npm set prefix /usr && npm install npm && npm install kosmtik
 
 WORKDIR /usr/lib/node_modules/kosmtik/ 
 RUN kosmtik plugins --install kosmtik-overpass-layer \
