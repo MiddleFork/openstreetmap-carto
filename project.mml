@@ -25,8 +25,8 @@ _parts:
   # Extents are used for tilemill, and don't actually make it to the generated XML
   extents: &extents
     extent: *world
-    srs-name: "900913"
-    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    srs-name: "3395"
+    srs: "+proj=merc +lon_0=0 +x_0=0 +y_0=0 +k=1 +datum=WGS84 +units=m +no_defs"
   extents84: &extents84
     extent: *world
     srs-name: "WGS84"
